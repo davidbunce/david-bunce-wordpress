@@ -1,0 +1,105 @@
+.front-page {
+	@include row();
+	padding-top: $base-font-size * 3;
+	background: url('../img/live/lily.png') no-repeat center right;
+	min-height: 650px;
+
+	@include media($big-tablet) {
+		background: none;
+	}
+
+	@include media($portrait-tablet) {
+		padding-top: $base-font-size * 1;
+		background: none;
+	}
+
+	@include media($mobile) {
+		padding-top: $base-font-size * 1;
+		background: none;
+	}
+}
+
+.front-page-welcome {
+
+	p {
+		font-family: $header-font-family;
+		font-size: $base-font-size * 2;
+		color: $black;
+	}
+
+	strong {
+		color: $black;
+		font-size: $base-font-size * 1.3333;
+	}
+
+	em {
+		font-style: normal;
+		color: $red;
+	}
+
+	a {
+		border-bottom: 1px dotted $red;
+		font-weight: 100;
+		text-transform: uppercase;
+
+		&:hover {
+			border-color: darken($red, 15)
+		}
+	}
+
+	@include media($full-size) {
+		@include span-columns(9);
+	}
+
+	@include media($big-tablet) {
+		@include span-columns(8);
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	@include media($portrait-tablet) {
+		@include span-columns(8);
+		padding-left: 10px;
+		padding-right: 10px;
+
+		p {
+			font-size: $base-font-size * 1.8;
+		}
+	}
+
+	@include media($mobile) {
+		@include span-columns(4);
+		padding-left: 10px;
+		padding-right: 10px;
+
+		p {
+			font-size: $base-font-size * 1.4;
+		}
+	}
+
+}
+
+.past-clients {
+	margin-top: $base-font-size;
+	margin-bottom: $base-font-size;
+	height: 180px;
+
+	li {
+		margin-right: 10px;
+		float: left;
+		border: $blue 4px solid;
+
+		&:hover {
+			border: $red 4px solid;
+		}
+
+		@include media($tablet) {
+			margin-bottom: $base-font-size;
+		}
+
+		@include media($mobile) {
+			margin-bottom: $base-font-size;
+			text-align: center;
+		}
+	}
+}

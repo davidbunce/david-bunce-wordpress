@@ -1,0 +1,143 @@
+.main-header {
+	@include row();
+	position: relative;
+}
+
+.logo {
+	@include media($mobile) {
+		margin-left: 10px;
+		display: block;
+		max-width: 70%;
+	}
+}
+
+
+
+@mixin responsive-button() {
+	display: block;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background: $red;
+	background-image: none;
+	color: #FFF;
+	text-shadow: none;
+	border: 1px solid $red !important;
+	box-shadow: none;
+}
+
+@mixin responsive-menu-interior() {
+	background: lighten($yellow, 30%);
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	max-height:0;
+	overflow: hidden;
+	position: relative;
+
+	&:nth-of-type(2) {
+		background: $washed-out-green;
+	}
+
+	li {
+		float: none;
+		margin-left: 0px;
+	}
+
+
+
+	a {
+		border: 0px;
+		margin-top: 0px;
+
+
+
+		&:hover {
+			border: 0px;
+		}
+	}
+
+	.current_page_item {
+		a {
+			border: 0px;
+		}
+	}
+}
+	.active {
+		max-height:9000px !important;
+	  	@include transition-duration(1s);
+	}
+
+.navbar-button {
+	display: none;
+
+	@include media($portrait-tablet) {
+		@include responsive-button();
+	}
+
+	@include media($mobile) {
+		@include responsive-button();
+	}
+
+}
+
+.main-menu {
+
+	@include media($full-size) {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
+
+	@include media($big-tablet) {
+		@include span-columns(8);
+	}
+
+	li {
+		float: left;
+		margin-left: 20px;
+
+
+		@include media($big-tablet) {
+			&:first-of-type {
+				margin-left: 0px;
+			}
+		}
+	}
+
+	a {
+		display: block;
+		margin-top: 5px;
+		line-height: 84px;
+		height: 70px;
+		padding: 0px 10px;
+		color: $black;
+		font-family: $serif;
+		font-size: 22px;
+		text-transform: uppercase;
+
+		&:hover {
+			margin-top: 0px;
+			border-top: 5px $red solid;
+			color: $red;
+		}
+	}
+
+	.current_page_item {
+		a {
+			border-top: 5px $blue solid;
+			margin-top: 0px;
+			color: $blue;
+		}
+
+	}
+
+	@include media($portrait-tablet) {
+		@include responsive-menu-interior();
+	}
+
+	@include media($mobile) {
+		@include responsive-menu-interior();
+	}
+}
+
