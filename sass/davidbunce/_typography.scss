@@ -5,13 +5,14 @@ article {
 	}
 
 	h2, h3, h4, h5 {
+		padding-top: $base-line-height;
 		color: $blue;
 	}
 
 	li {
 		margin-left: $base-font-size * 3;
 		font-size: $base-font-size * 1.25;
-		margin-bottom: $base-line-height / 2;
+		margin-bottom: $base-line-height;
 		color: darken($blue, 30%);
 	}
 
@@ -19,12 +20,14 @@ article {
 		li {
 			list-style-type: disc;
 		}
+		margin-bottom: $base-line-height * 2;
 	}
 
 	ol {
 		li {
 			list-style-type: decimal-leading-zero;
 		}
+		margin-bottom: $base-line-height * 2;
 	}
 
 	blockquote {
