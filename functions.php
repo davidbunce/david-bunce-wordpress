@@ -46,7 +46,7 @@
 	    // Modernizer
 	    // wp_register_script( 'dodifferent', get_bloginfo('template_directory') . '/js/modernizr.custom.js');
 	    // wp_enqueue_script( 'dodifferent' );
-	    wp_register_script( 'local-library', get_bloginfo('template_directory') . '/js/dist/built.js');
+	    wp_register_script( 'local-library', get_bloginfo('template_directory') . '/js/live/built.min.js');
 	    wp_enqueue_script( 'local-library' );
 	    // Navigation for responsive site
 	   // wp_register_script( 'responsive-nav', get_bloginfo('template_directory') . '/js/responsive-nav.min.js');

@@ -18,12 +18,22 @@
 	position: absolute;
 	top: 15px;
 	right: 15px;
+	height: 40px;
+	width: 40px;
+	text-align: center;
 	background: $red;
 	background-image: none;
 	color: #FFF;
 	text-shadow: none;
 	border: 1px solid $red !important;
 	box-shadow: none;
+
+	&:after {
+		content: '☰';
+		position: relative;
+		// left: -7px;
+		font-size: 14px;
+	}
 }
 
 @mixin responsive-menu-interior() {
@@ -44,16 +54,28 @@
 		margin-left: 0px;
 	}
 
+	.sub-menu {
+		display: block !important;
+		position: relative !important;
+		top: auto !important;
+		left: auto !important;
+		width: 100%;
+		height: auto;
 
+		a {
+			background: lighten($yellow, 20%) !important;
+		}
+	}
 
-	a {
-		border: 0px;
+	a, .sub-menu a, .menu-item-has-children a, .menu-item-has-children:hover a {
+		border: 0px !important;
 		margin-top: 0px;
-
-
+		height: 50px;
+		line-height: 50px;
+		background: lighten($yellow, 20%);
 
 		&:hover {
-			border: 0px;
+			border: 0px !important;
 		}
 	}
 
@@ -71,6 +93,10 @@
 .navbar-button {
 	display: none;
 
+	@include media($big-tablet) {
+		@include responsive-button();
+	}
+
 	@include media($portrait-tablet) {
 		@include responsive-button();
 	}
@@ -82,6 +108,7 @@
 }
 
 .main-menu {
+	z-index: 50;
 
 	@include media($full-size) {
 		position: absolute;
@@ -91,18 +118,6 @@
 
 	@include media($big-tablet) {
 		@include span-columns(8);
-	}
-
-	li {
-		float: left;
-		margin-left: 20px;
-
-
-		@include media($big-tablet) {
-			&:first-of-type {
-				margin-left: 0px;
-			}
-		}
 	}
 
 	a {
@@ -115,11 +130,27 @@
 		font-family: $serif;
 		font-size: 22px;
 		text-transform: uppercase;
+		z-index: 500;
 
 		&:hover {
 			margin-top: 0px;
 			border-top: 5px $red solid;
 			color: $red;
+			background: lighten($red, 50%);
+		}
+	}
+
+	.menu-item-has-children {
+		&:hover {
+			a:first-of-type {
+				border-top: 5px $red solid;
+				background: lighten($red, 50%);
+				margin-top: 0px;
+			}
+
+			.sub-menu {
+				display: block;
+			}
 		}
 	}
 
@@ -130,6 +161,52 @@
 			color: $blue;
 		}
 
+	}
+
+	li {
+		float: left;
+		margin-left: 20px;
+		position: relative;
+
+		.sub-menu {
+			display: none;
+			border: none;
+			position: absolute;
+			left: -20px;
+			top: 70px;
+
+			li {
+				background: $red;
+				width: 130%;
+				height: 50px;
+			}
+
+			a, a:first-of-type {
+				border-top: 0px !important;
+				margin-top: 0px !important;
+				background: $red !important;
+				line-height: 50px;
+				height: 50px;
+				color: #FFF;
+				border-left: lighten($red, 30%) 5px solid;
+
+				&:hover {
+					background: lighten($red, 40%) !important;
+					border-left: $red 5px solid !important;
+					color: $red !important;
+				}
+			}
+		}
+
+		@include media($big-tablet) {
+			&:first-of-type {
+				margin-left: 0px;
+			}
+		}
+	}
+
+	@include media($big-tablet) {
+		@include responsive-menu-interior();
 	}
 
 	@include media($portrait-tablet) {

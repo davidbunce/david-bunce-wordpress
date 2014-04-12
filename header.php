@@ -7,7 +7,8 @@
         <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <?php wp_head(); ?>
     </head>
     <body>
@@ -21,7 +22,7 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/img/assets/logo.png" />
             </a>
             <button class="navbar-button" class="navbar-toggle" data-toggle="collapse" data-target="main-navbar">
-                &#9776;
+
             </button>
 
             <?php wp_nav_menu(

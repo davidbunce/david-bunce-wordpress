@@ -1,14 +1,16 @@
 <?php get_header(); ?>
 
         <div class="container standard-container">
-            <div class="post-content">
+            <article class="post-content">
                 <?php if(have_posts()) : while (have_posts()) : the_post(); ?>
-                    <h1><?php the_title(); ?></h1>
+                    <header>
+                    	<h1><?php the_title(); ?></h1>
+                    </header>
                     <?php the_content(); ?>
 
                 <?php endwhile; endif;  ?>
 
-            </div>
+            </article>
 
         </div>
 
