@@ -148,6 +148,7 @@
 				margin-top: 0px;
 
 				color: #FFF;
+
 			}
 
 			.sub-menu {
@@ -193,7 +194,7 @@
 				background: $yellow !important;
 				line-height: 50px;
 				height: 50px;
-				color: $red;
+				color: $red !important;
 				border-left: lighten($red, 30%) 5px solid;
 
 				&:hover {

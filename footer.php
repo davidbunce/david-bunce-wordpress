@@ -19,21 +19,26 @@
                     <a href="http://davidbunce.com/feed/" class="webicon rss large">RSS</a>
                 </div>
                 <p>Website copyright &copy; David Bunce 2014.<br>
-                    <a href="">Privacy</a> |
+                    <a href="/privacy-policy">Privacy</a> |
                     <a href="">About this site</a>
                 </p>
 
             </div>
         </footer>
+        <?php wp_footer(); ?>
         <script type="text/javascript" src="//use.typekit.net/ojd0aib.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
         <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-17230634-1');ga('send','pageview');
+        var gaProperty = 'UA-17230634-1';
+        var disableStr = 'ga-disable-' + gaProperty;if (document.cookie.indexOf(disableStr + '=true') > -1) {window[disableStr] = true;}
+        // Opt-out function
+        function gaOptout() {
+          document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+          window[disableStr] = true;
+        }
+        </script>
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('set', 'anonymizeIp', true);ga('create', 'UA-17230634-1', 'davidbunce.com');ga('send', 'pageview');
         </script>
 
     </body>
