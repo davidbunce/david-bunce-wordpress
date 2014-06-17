@@ -7,7 +7,7 @@
                     <article class="post-loop">
                         <header>
                             <h2><a href="<?php the_permalink(); ?>" ?><?php the_title(); ?></a></h2>
-                            <p class="post-details"><?php the_time('d m y '); ?></p>
+                            <p class="post-details"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></p>
                         </header>
                         <?php the_excerpt(); ?>
                         <p>

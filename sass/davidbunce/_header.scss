@@ -134,18 +134,18 @@
 
 		&:hover {
 			margin-top: 0px;
-			border-top: 5px $yellow solid;
+			border-top: 5px $red solid;
 			color: $red;
-			background: lighten($red, 40%);
+			background: lighten($yellow, 45%);
 		}
 	}
 
 	.menu-item-has-children {
 		&:hover {
 			a:first-of-type {
-				border-top: 5px $yellow solid;
-				color: $red;
-				background: lighten($red, 40%);
+				border-top: 5px $red solid;
+				// color: $red;
+				background: lighten($yellow, 45%);
 				margin-top: 0px;
 
 			}
@@ -163,7 +163,7 @@
 			color: $blue;
 
 			&:hover {
-				color: #FFF;
+				color: $red;
 			}
 		}
 
@@ -190,15 +190,15 @@
 			a, a:first-of-type {
 				border-top: 0px !important;
 				margin-top: 0px !important;
-				background: $yellow !important;
+				background: lighten($yellow, 45%) !important;
 				line-height: 50px;
 				height: 50px;
-				color: $red !important;
+				// color: $red !important;
 				border-left: lighten($red, 30%) 5px solid;
 
 				&:hover {
-					background: lighten($red, 40%) !important;
-					border-left: $yellow 5px solid !important;
+					// background: lighten($red, 40%) !important;
+					border-left: lighten($red, 25%) 5px solid;
 					color: $red !important;
 				}
 			}
