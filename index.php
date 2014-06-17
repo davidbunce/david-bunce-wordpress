@@ -7,6 +7,7 @@
                     <article class="post-loop">
                         <header>
                             <h2><a href="<?php the_permalink(); ?>" ?><?php the_title(); ?></a></h2>
+                            <p class="post-details"><?php the_time('d m y '); ?></p>
                         </header>
                         <?php the_excerpt(); ?>
                         <p>

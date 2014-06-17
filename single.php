@@ -8,6 +8,12 @@
                     </header>
                     <?php the_content(); ?>
 
+
+                <?php if (!have_comments() && !comments_open() && !is_page() && post_type_supports(get_post_type(), 'comments')) :
+                    // Do nothing
+                else :
+                    comments_template();
+                endif; ?>
                 <?php endwhile; endif;  ?>
 
             </article>

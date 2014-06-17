@@ -135,8 +135,8 @@
 		&:hover {
 			margin-top: 0px;
 			border-top: 5px $yellow solid;
-			color: #FFF;
-			background: $red;
+			color: $red;
+			background: lighten($red, 40%);
 		}
 	}
 
@@ -144,10 +144,9 @@
 		&:hover {
 			a:first-of-type {
 				border-top: 5px $yellow solid;
-				background: $red;
+				color: $red;
+				background: lighten($red, 40%);
 				margin-top: 0px;
-
-				color: #FFF;
 
 			}
 
@@ -198,9 +197,9 @@
 				border-left: lighten($red, 30%) 5px solid;
 
 				&:hover {
-					background: $red !important;
+					background: lighten($red, 40%) !important;
 					border-left: $yellow 5px solid !important;
-					color: #FFF !important;
+					color: $red !important;
 				}
 			}
 		}
