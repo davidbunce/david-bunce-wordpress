@@ -3,6 +3,7 @@
         <div class="container standard-container">
             <div class="post-content">
                 <h1>Portfolio</h1>
+                <?php icit_spot('Portfolio Top'); ?>
                 <?php if(have_posts()) : while (have_posts()) : the_post(); ?>
                     <article class="portfolio-loop">
                         <header>

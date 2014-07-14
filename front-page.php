@@ -8,7 +8,7 @@
 
                 <?php endwhile; endif;  ?>
 
-                <h2>Past clients</h2>
+                <h2>Case studies</h2>
                 <ul class="past-clients">
                     <?php
                     $arguments = array(
