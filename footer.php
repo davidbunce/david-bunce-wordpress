@@ -28,20 +28,16 @@
             </div>
         </footer>
         <?php wp_footer(); ?>
-        <script type="text/javascript" src="//use.typekit.net/ojd0aib.js"></script>
-        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
         <script>
-        var gaProperty = 'UA-17230634-1';
-        var disableStr = 'ga-disable-' + gaProperty;if (document.cookie.indexOf(disableStr + '=true') > -1) {window[disableStr] = true;}
-        // Opt-out function
-        function gaOptout() {
-          document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-          window[disableStr] = true;
-        }
+          (function(d) {
+            var config = {
+              kitId: 'ojd0aib',
+              scriptTimeout: 3000
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+          })(document);
         </script>
-        <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('set', 'anonymizeIp', true);ga('create', 'UA-17230634-1', 'davidbunce.com');ga('send', 'pageview');
-        </script>
+
 
     </body>
 </html>

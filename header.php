@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html class="no-js wf-loading">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,10 +17,14 @@
 
         <!-- Add your site or application content here -->
         <header class="container main-header">
-            <a class="logo" href="<?php echo home_url(); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/assets/logo.png" />
-            </a>
-            <?php do_action('icl_language_selector'); ?>
+            <div class="logo-area">
+                <a class="logo" href="<?php echo home_url(); ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/assets/logo.png" />
+                </a>
+                <div class="language-codes">
+                    <?php davidbunce_language_selector_header(); ?>
+                </div>
+            </div>
             <button class="navbar-button" class="navbar-toggle" data-toggle="collapse" data-target="main-navbar">
 
             </button>

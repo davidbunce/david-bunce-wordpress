@@ -3,12 +3,24 @@
 	position: relative;
 }
 
-.logo {
+.logo-area {
 	@include media($mobile) {
 		margin-left: 10px;
 		display: block;
 		max-width: 70%;
 	}
+}
+
+.language-codes {
+	font-weight: bold;
+
+	a {
+		padding: 0 10px;
+	}
+}
+
+.logo {
+
 }
 
 
