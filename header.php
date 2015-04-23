@@ -20,9 +20,11 @@
             <a class="logo" href="<?php echo home_url(); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/assets/logo.png" />
             </a>
+            <?php do_action('icl_language_selector'); ?>
             <button class="navbar-button" class="navbar-toggle" data-toggle="collapse" data-target="main-navbar">
 
             </button>
+
 
             <?php wp_nav_menu(
                 array(

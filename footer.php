@@ -1,9 +1,9 @@
 <footer class="container main-footer">
             <div class="footer-bio">
                 <img class="footer-bio-img" src="<?php echo get_template_directory_uri(); ?>/img/live/footer-image.png">
-                <h4 class="footer-title">About David</h4>
+                <h4 class="footer-title"><?php _e('About David'); ?></h4>
                 <p>
-                    <strong>I am a web designer and front end developer based in Scotland.</strong> I work with design agencies, charities and churches to build high quality websites. <a href="/web-design">More</a>.
+                    <?php _e('<strong>I am a web designer and front end developer based in Austria.</strong> I work with design agencies, charities and churches to build high quality websites. <a href="/web-design">More</a>.'); ?>
                 </p>
                 <p>
                     I would <strong>love</strong> to work with you on your web project. <a href="/contact">Get in touch</a>
@@ -13,7 +13,7 @@
             <div class="footer-social-media">
                 <h4 class="footer-title">Find me on:</h4>
                 <div class="social-media-icons">
-                    <a href="https://twitter.com/davidbunce" class="webicon twitter large">Follow me on Twitter</a>
+                    <a href="https://twitter.com/bunce_web" class="webicon twitter large">Follow me on Twitter</a>
                     <a href="https://plus.google.com/+DavidBunce" class="webicon googleplus large">Follow me on Google Plus</a>
                     <a href="http://instagram.com/davidbunce" class="webicon instagram large">Follow on Instagram</a>
                     <a href="http://uk.linkedin.com/pub/david-bunce/2b/206/2b4/" class="webicon linkedin large">Connect on LinkedIn</a>
@@ -22,7 +22,7 @@
                 </div>
                 <p>Website copyright &copy; David Bunce 2014.<br>
                     <a href="/privacy-policy">Privacy</a> |
-                    <a href="">About this site</a>
+                    <a href="/de/contact">Impressum</a>
                 </p>
 
             </div>

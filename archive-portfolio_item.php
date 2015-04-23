@@ -3,7 +3,13 @@
         <div class="container standard-container">
             <div class="post-content">
                 <h1>Portfolio</h1>
-                <?php icit_spot('Portfolio Top'); ?>
+
+                <?php
+                if(ICL_LANGUAGE_CODE == 'en'):
+                    icit_spot('Portfolio Top');
+                endif; ?>
+
+
                 <?php if(have_posts()) : while (have_posts()) : the_post(); ?>
                     <article class="portfolio-loop">
                         <header>
@@ -20,20 +26,20 @@
 
                                 <div class="portfolio-sidebar-small-item">
                                     <?php $client_name =  get_field('client_name'); ?>
-                                    <strong>Client:</strong> <a href="<?php the_permalink(); ?>"><?php echo $client_name; ?></a>
+                                    <strong><?php _e('Client:'); ?></strong> <a href="<?php the_permalink(); ?>"><?php echo $client_name; ?></a>
                                 </div>
 
                                 <div class="portfolio-sidebar-small-item">
                                     <?php $project_type =  get_field('project_type'); ?>
-                                    <strong>Project Type:</strong> <?php echo $project_type; ?>
+                                    <strong><?php _e('Project Type:'); ?></strong> <?php echo $project_type; ?>
                                 </div>
 
                                 <div class="portfolio-sidebar-small-item">
                                     <?php $date =  get_field('date'); ?>
-                                    <strong>Date:</strong> <?php echo $date; ?>
+                                    <strong><?php _e('Date:'); ?></strong> <?php echo $date; ?>
                                 </div>
 
-                                <a href="<?php the_permalink(); ?>">View project details</a>
+                                <a href="<?php the_permalink(); ?>"><?php _e('View project details'); ?></a>
                             </div>
                         </div>
                     </article>
