@@ -13,11 +13,11 @@
             <div class="footer-social-media">
                 <h4 class="footer-title">Find me on:</h4>
                 <div class="social-media-icons">
-                    <a href="https://twitter.com/bunce_web" class="webicon twitter large">Follow me on Twitter</a>
+                    <a href="https://github.com/davidbunce" class="webicon github large">Follow me on Github</a>
+                    <a href="https://twitter.com/davidbunce_web" class="webicon twitter large">Follow me on Twitter</a>
                     <a href="https://plus.google.com/+DavidBunce" class="webicon googleplus large">Follow me on Google Plus</a>
                     <a href="http://instagram.com/davidbunce" class="webicon instagram large">Follow on Instagram</a>
                     <a href="http://uk.linkedin.com/pub/david-bunce/2b/206/2b4/" class="webicon linkedin large">Connect on LinkedIn</a>
-                    <a href="https://github.com/davidbunce" class="webicon github large">Follow me on Github</a>
                     <a href="http://davidbunce.com/feed/" class="webicon rss large">RSS</a>
                 </div>
                 <p>Website copyright &copy; David Bunce 2014.<br>

@@ -5,17 +5,21 @@
 	min-height: 650px;
 
 	@include media($big-tablet) {
-		background: none;
+		padding-bottom: 600px;
+		background-position: bottom center;
 	}
 
 	@include media($portrait-tablet) {
 		padding-top: $base-font-size * 1;
-		background: none;
+		padding-bottom: 600px;
+		background-position: bottom center;
 	}
 
 	@include media($mobile) {
 		padding-top: $base-font-size * 1;
-		background: none;
+		padding-bottom: 420px;
+		background-position: center bottom;
+		background-size: contain;
 	}
 }
 
@@ -71,6 +75,7 @@
 		@include span-columns(4);
 		padding-left: 10px;
 		padding-right: 10px;
+		text-align: center;
 
 		p {
 			font-size: $base-font-size * 1.4;
