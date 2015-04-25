@@ -4,6 +4,9 @@ profile
 
 # xcode noise
 build/*
+img/live/
+css/
+js/live/
 *.mode1
 *.mode1v3
 *.mode2v3
