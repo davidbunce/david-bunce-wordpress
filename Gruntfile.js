@@ -68,19 +68,6 @@ module.exports = function(grunt) {
             }
         },
 
-        grunticon: {
-            myIcons: {
-                files: [{
-                    expand: true,
-                    cwd: 'img/svg-live',
-                    src: ['*.svg', '*.png'],
-                    dest: "img/icons"
-                }],
-                options: {
-                }
-            }
-        },
-
         sass: {
             dist: {
                 options: {
@@ -116,14 +103,6 @@ module.exports = function(grunt) {
             images: {
                 files: ['img/assets/*.{png,jpg,gif}'],
                 tasks: ['imagemin'],
-                options: {
-                    spawn: false,
-                }
-            },
-
-            svgmin: {
-                files: ['img/svg-assets/*.svg'],
-                tasks: ['svgmin', 'grunticon'],
                 options: {
                     spawn: false,
                 }

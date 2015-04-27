@@ -1,26 +1,121 @@
-/* Webicons by Adam Fairhead: http://adamfairhead.com */
-
-.webicon { display: inline-block; background-size: 100%; width: 30px; height: 30px; text-indent: -999em; text-align: left; -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5); -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5); box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5); -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; margin-bottom: 5px; }
-.webicon:hover { margin: -1px 0 1px; -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25); -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25); box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25); }
-.webicon.small { width: 20px; height: 20px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
-.webicon.large { width: 48px; height: 48px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; }
-
-/* restore webicons accessibility for print */
-@media print {
-  * {background: transparent !important; color: #000 !important; -moz-box-shadow: none !important; -webkit-box-shadow: none !important; box-shadow: none !important; text-shadow: none !important;}
-  .webicon {text-indent: 0; width: auto !important; height: auto !important; -moz-border-radius: 0 !important; -webkit-border-radius: 0 !important; border-radius: 0 !important;}
+@font-face {
+    font-family: 'si';
+    src: url('../socicon.eot');
+    src: url('../socicon.eot?#iefix') format('embedded-opentype'),
+         url('../socicon.woff') format('woff'),
+         url('../socicon.ttf') format('truetype'),
+         url('../socicon.svg#icomoonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+ 
+}
+ 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family:si;
+        src: url(../socicon.svg) format(svg);
+    }
 }
 
-// Include or remove the icons you want to use on your site from this list.
-$webicons-icons: github instagram googleplus linkedin pinterest twitter rss;
-// $webicons-icons: f500px aboutme adn android apple behance bitbucket blogger branch coderwall creativecloud deviantart dribbble dropbox evernote fairheadcreative facebook flickr foursquare git github goodreads google googleplay googleplus hangouts html5 icloud indiegogo instagram instapaper kickstarter klout lastfm linkedin mail medium mixi msn openid picasa pinterest pocketapp potluck quora orkut mercurial rdio reddit renren rss skitch skype soundcloud spotify stackoverflow stumbleupon svtle svn tent tripadvisor tumblr twitter viadeo vine vimeo weibo windows wordpress xing yahoo yelp youtube youversion zerply;
+.soc {
+    overflow:hidden;
+    margin:0; padding:0;
+    list-style:none;
+}
 
-// Specify the path to the webicons directory here. Include trailing slash.
-$webicons-url: "webicons/" !default;
+.soc li {
+    display:inline-block;
+    *display:inline;
+    zoom:1;
+}
 
-@each $webicons-icon in $webicons-icons {
-  .no-svg .webicon.#{$webicons-icon}       { background: url("#{$webicons-url}webicon-#{$webicons-icon}-m.png"); }
-  .no-svg .webicon.#{$webicons-icon}.large { background: url("#{$webicons-url}webicon-#{$webicons-icon}.png"); }
-  .no-svg .webicon.#{$webicons-icon}.small { background: url("#{$webicons-url}webicon-#{$webicons-icon}-s.png"); }
-  .svg    .webicon.#{$webicons-icon}       { background: url("#{$webicons-url}webicon-#{$webicons-icon}.svg"); }
+.soc li a {
+    font-family:si!important;
+    font-style:normal;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;
+
+    -o-transition:.1s;
+    -ms-transition:.1s;
+    -moz-transition:.1s;
+    -webkit-transition:.1s;
+    transition:.1s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+
+    overflow:hidden;
+    text-decoration:none;
+    text-align:center;
+    display:block;
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    margin-right: 4px;
+    color: #ffffff;
+    background-color: none;
+}
+
+.soc-icon-last{
+    margin:0 !important;
+}
+
+.soc-twitter {
+    background-color: #4da7de;
+}
+.soc-twitter:before {
+    content:'a';
+}
+.soc-linkedin {
+    background-color: #3371b7;
+}
+.soc-linkedin:before {
+    content:'j';
+}
+.soc-rss {
+    background-color: #f26109;
+}
+.soc-rss:before {
+    content:',';
+}
+.soc-instagram {
+    background-color: #9c7c6e;
+}
+.soc-instagram:before {
+    content:'x';
+}
+.soc-github {
+    background-color: #5380c0;
+}
+.soc-github:before {
+    content:'Q';
+}
+
+.soc-twitter:hover {
+    background-color: #61bbf2;
+}
+.soc-linkedin:hover {
+    background-color: #4785cb;
+}
+.soc-rss:hover {
+    background-color: #ff751d;
+}
+.soc-instagram:hover {
+    background-color: #b09082;
+}
+.soc-github:hover {
+    background-color: #6794d4;
 }
