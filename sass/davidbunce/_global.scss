@@ -1,5 +1,30 @@
 body {
-	background: url('../img/live/crossword.png');
+	background: #111;
+	overflow-x: hidden;
+}
+
+.site-wrap {
+    min-width: 100%;
+    min-height: 100%;
+    background: url('../img/live/crossword.png');
+    position: relative;
+    top: 0;
+    bottom: 100%;
+    left: 0;
+    z-index: 1;
+
+    -webkit-transform: translateX(0);
+	 transform: translateX(0);
+	 -webkit-transition: .3s ease all;
+	 transition: .3s ease all;
+}
+
+
+// This moves the whole document to the left by 200px when the button is checked 
+.site-wrap.active {
+    -webkit-transform: translateX(-200px);
+  	transform: translateX(-200px);
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
 }
 
 .container {
@@ -80,6 +105,12 @@ body {
 			@include shift(0);
 			padding-left: 10px;
 			padding-right: 10px;
+		}
+
+		img {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
 		}
 
 		p:first-of-type {

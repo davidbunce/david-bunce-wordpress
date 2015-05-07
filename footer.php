@@ -25,6 +25,7 @@
 
             </div>
         </footer>
+    </div> <!-- end .site-wrap -->
         <?php wp_footer(); ?>
         <script>
           (function(d) {

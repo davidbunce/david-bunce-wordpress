@@ -1,0 +1,202 @@
+@mixin responsive-menu-interior() {
+	background: lighten($yellow, 30%);
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	max-height:0;
+	overflow: hidden;
+	position: relative;
+
+	&:nth-of-type(2) {
+		background: $washed-out-green;
+	}
+
+	li {
+		float: none;
+		margin-left: 0px;
+	}
+
+	.sub-menu {
+		display: block !important;
+		position: relative !important;
+		top: auto !important;
+		left: auto !important;
+		width: 100%;
+		height: auto;
+
+		a {
+			background: lighten($yellow, 20%) !important;
+		}
+	}
+
+	a, .sub-menu a, .menu-item-has-children a, .menu-item-has-children:hover a {
+		border: 0px !important;
+		margin-top: 0px;
+		height: 50px;
+		line-height: 50px;
+		background: lighten($yellow, 20%);
+
+		&:hover {
+			border: 0px !important;
+		}
+	}
+
+	.current_page_item {
+		a {
+			border: 0px;
+		}
+	}
+}
+	.active {
+		max-height:9000px !important;
+	  	@include transition-duration(1s);
+	}
+
+.navbar-button {
+	display: block;
+	position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+	height: 40px;
+	padding-left: 40px;
+	font-family: $serif;
+	text-transform: uppercase;
+	text-align: center;
+	background: $red;
+	
+   
+	color: #FFF;
+	text-shadow: none;
+	border: 1px solid $red !important;
+	box-shadow: none;
+
+	&:hover {
+		background: darken($red, 5%) !important;
+		box-shadow: none !important;
+	}
+
+	&:after {
+		background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6' style='fill: #FFF' /><rect y='24' width='30' height='6' style='fill: #FFF' /><rect y='12' width='30' height='6' style='fill: #FFF' /></svg>");
+		height: 15px;
+		 background-size: contain;
+		width: 20px;
+		content: "";
+		display: block;
+		position: absolute;
+		left: 10px;
+
+		top: 12px;
+
+
+	}
+
+	
+}
+
+
+.main-menu {
+	list-style: none;
+    width: 230px;
+    padding-top: 130px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+
+
+	a {
+		display: block;
+		line-height: 40px;
+		height: 40px;
+		padding: 0px 10px;
+		color: #FFF;
+		font-family: $serif;
+		font-size: 18px;
+		text-transform: uppercase;
+		z-index: 500;
+
+		&:hover {
+
+			border-right: 5px $red solid;
+			color: $red;
+			background: lighten($yellow, 45%);
+		}
+	}
+
+	.menu-item-has-children {
+		&:hover {
+			a:first-of-type {
+				border-right: 5px $red solid;
+				// color: $red;
+				background: lighten($yellow, 45%);
+				margin-top: 0px;
+
+			}
+
+			.sub-menu {
+				display: block;
+			}
+		}
+	}
+
+	.current_page_item {
+		a {
+			border-right: 5px $blue solid;
+			margin-top: 0px;
+			color: $blue;
+
+			&:hover {
+				color: $red;
+			}
+		}
+
+	}
+
+	li {
+		text-align: right;
+		margin-left: 20px;
+		position: relative;
+
+		.sub-menu {
+			display: none;
+			border: none;
+			position: absolute;
+			left: -20px;
+			top: 70px;
+
+			li {
+				background: $red;
+				width: 130%;
+				height: 50px;
+			}
+
+			a, a:first-of-type {
+				border-top: 0px !important;
+				margin-top: 0px !important;
+				background: lighten($yellow, 45%) !important;
+				line-height: 50px;
+				height: 50px;
+				// color: $red !important;
+				border-left: lighten($red, 30%) 5px solid;
+
+				&:hover {
+					// background: lighten($red, 40%) !important;
+					border-left: lighten($red, 25%) 5px solid;
+					color: $red !important;
+				}
+			}
+		}
+
+		@include media($big-tablet) {
+			&:first-of-type {
+				margin-left: 0px;
+			}
+		}
+	}
+
+	
+}
+
