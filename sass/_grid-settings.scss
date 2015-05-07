@@ -11,4 +11,5 @@ $full-size: (min-width 1024px 15);
 $big-tablet: new-breakpoint(min-width 800px max-width 1024px 8);
 $portrait-tablet: new-breakpoint(min-width 480px max-width 800px 8);
 $tablet: new-breakpoint(min-width 480px max-width 1024px 8);
+$tablet-up: new-breakpoint(min-width 600px 15);
 $mobile: new-breakpoint(max-width 480px 4);

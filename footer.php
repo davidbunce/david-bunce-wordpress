@@ -1,10 +1,14 @@
 <footer class="container main-footer">
             <div class="footer-bio">
-                <img class="footer-bio-img" src="<?php echo get_template_directory_uri(); ?>/img/live/footer-image.png">
-                <h4 class="footer-title"><?php _e('About David'); ?></h4>
-                <p>
-                    <?php _e('<strong>I am a web designer and front end developer based in Austria.</strong> I work with design agencies and businesses to build high quality websites. <a href="/about-me">More</a>.'); ?>
-                </p>
+                <?php if(ICL_LANGUAGE_CODE=='en'); ?>
+                    <a href="/contact" class="hire-me-button">
+                        Hire me
+                    </a>
+                <?php else: ?>
+                    <a href="/de/kontakt" class="hire-me-button">
+                        Mit mir arbeiten
+                    </a>
+                <?php endif; ?>
             </div>
 
             <div class="footer-social-media">

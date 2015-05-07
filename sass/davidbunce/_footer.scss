@@ -8,8 +8,19 @@
 	}
 }
 
+.hire-me-button {
+    padding: 10px 40px;
+    color: $vibrant-green;
+    font-family: $serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    border: 2px solid;
+    border-radius: 3px;
+}
+
 .footer-bio {
 	@include span-columns(9);
+    padding-top: 20px;
 
 	@include media($tablet) {
 		@include span-columns(8);
@@ -23,17 +34,7 @@
 		padding-right: 10px;
 	}
 
-	.footer-bio-img {
-		@include span-columns(3 of 9);
-		@include media($mobile) {
-			@include clearfix();
-			width: auto;
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-
-		}
-	}
+	
 }
 
 
