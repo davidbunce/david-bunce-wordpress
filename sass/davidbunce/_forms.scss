@@ -1,0 +1,57 @@
+.gform_body {
+	font-size: 13px; 
+
+	li {
+		list-style-type: none;
+		margin-left: 0px;
+	}
+
+	label, option {
+		color: $blue;
+	}
+
+	.gfield_description {
+		color: $blue;
+		font-style: italic;
+		margin-bottom: 20px;
+	}
+
+	.ginput_complex label {
+		color: lighten($blue, 20%);
+	}
+
+	.name_first, .name_last, .ginput_right, .ginput_left {
+		width: 48%;
+		display: inline-block;
+	}
+}
+
+.scheduling {
+	background: $blue;
+	color: #FFF;
+	padding: 5px 12px;
+	font-family: $header-font-family;
+}
+
+footer .scheduling {
+	margin-top: 20px;
+	width: 60%;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.gfield_checkbox, .gfield_radio {
+	padding: 10px;
+
+	label {
+		font-size: 13px;
+		color: lighten($blue, 20%);
+	}
+
+	label, input {
+		display: inline-block;
+	}
+}
+
+
+

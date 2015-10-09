@@ -1,11 +1,14 @@
 <footer class="container main-footer">
             <div class="footer-bio">
-                <?php if(ICL_LANGUAGE_CODE=='en'); ?>
+                <?php if(ICL_LANGUAGE_CODE=='en'): ?>
                     <a href="/contact" class="hire-me-button">
                         Hire me
                     </a>
+                    <div class="scheduling">
+                        I'm currently taking bookings for the second half of September onwards. Mini-projects and WordPress fixes accomodated much sooner.
+                    </div>
                 <?php else: ?>
-                    <a href="/de/kontakt" class="hire-me-button">
+                    <a href="/de/contact" class="hire-me-button">
                         Mit mir arbeiten
                     </a>
                 <?php endif; ?>
@@ -24,7 +27,8 @@
                
                 <p>Website copyright &copy; David Bunce 2015.<br>
                     <a href="/privacy-policy">Privacy</a> |
-                    <a href="/de/contact">Impressum</a>
+                    <a href="/social-responsibility">Social responsibility</a> |
+                    <a href="/impressum">Impressum</a>
                 </p>
 
             </div>

@@ -10,7 +10,7 @@
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <?php wp_head(); ?>
     </head>
-    <body>
+    <body <?php body_class(); ?>>
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -29,7 +29,9 @@
         ); ?>
         <div class="site-wrap">
 
-            <!-- Add your site or application content here -->
+        <?php if(is_front_page()): ?>
+            <div class="front-page-top">
+        <?php endif; ?>
             <header class="container main-header">
                 <div class="logo-area">
                     <a class="logo" href="<?php echo home_url(); ?>">

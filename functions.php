@@ -1,5 +1,6 @@
 <?php
 	require_once('types/portfolio-type.php');
+	require_once('types/client-type.php');
 
 	//////////////////////////////////////////////////////////////
 	// Enqueue scripts and styles

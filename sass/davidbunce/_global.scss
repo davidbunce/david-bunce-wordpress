@@ -19,6 +19,12 @@ body {
 	 transition: .3s ease all;
 }
 
+.page-id-352 .site-wrap {
+	background: url('../img/live/crossword.png');
+	background: url('../img/live/crossword.png') repeat,
+		url('../img/live/wordpress-logo.png')  bottom left no-repeat;
+}
+
 
 // This moves the whole document to the left by 200px when the button is checked 
 .site-wrap.active {
@@ -87,8 +93,8 @@ body {
 		}
 
 	.post-content {
-		@include span-columns(9);
-		@include shift(3);
+		@include span-columns(10);
+		@include shift(2);
 
 		@include media($big-tablet) {
 			@include span-columns(6);
